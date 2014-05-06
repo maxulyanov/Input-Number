@@ -2,17 +2,28 @@ $(function(){
 
 	// Кнопка +
 	$('.number-plus').on('click', function(){
-		$(this).attr('unselectable', false).css('MozUserSelect','none');
-		var thisVal = $(this).parent().find('.number-field').val();
+		var thisInput = $(this).parent().find('.number-field');
+		var thisVal = $(thisInput).val();
 		thisVal++;
+		$(thisInput).stop(true, true).animate({
+			backgroundColor: '#9bcb1e',
+		},400).stop(true,true).animate({
+			backgroundColor: '#FFF',
+		},400);
 		computation(this, thisVal);
 	});
 
 	// Кнопка -
 	$('.number-minus').on('click', function(){
-		var thisVal = $(this).parent().find('.number-field').val();
-		thisVal--;
+		var thisInput = $(this).parent().find('.number-field');
+		var thisVal = $(thisInput).val();
+		thisVal--; 
 		if(!thisVal) thisVal = 1;
+		$(thisInput).stop(true, true).animate({
+			backgroundColor: '#ea6856',
+		},400).stop(true,true).animate({
+			backgroundColor: '#FFF',
+		},400);
 		computation(this, thisVal);
 	});
 
@@ -21,7 +32,6 @@ $(function(){
 		if(event.charCode < 48 || event.charCode > 57) return false;
 		var thisVal = $(this).parent().find('.number-field').val(); 
 		if(thisVal < 1) thisVal = 1;
-		test(thisVal);
 		computation(this, thisVal);
 	})
  
