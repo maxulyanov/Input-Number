@@ -5,11 +5,13 @@ $(function(){
 		var thisInput = $(this).parent().find('.number-field');
 		var thisVal = $(thisInput).val();
 		thisVal++;
+
 		$(thisInput).stop(true, true).animate({
 			backgroundColor: '#9bcb1e',
 		},400).stop(true,true).animate({
 			backgroundColor: '#FFF',
 		},400);
+
 		computation(this, thisVal);
 	});
 
@@ -18,12 +20,14 @@ $(function(){
 		var thisInput = $(this).parent().find('.number-field');
 		var thisVal = $(thisInput).val();
 		thisVal--; 
+
 		if(!thisVal) thisVal = 1;
 		$(thisInput).stop(true, true).animate({
 			backgroundColor: '#ea6856',
 		},400).stop(true,true).animate({
 			backgroundColor: '#FFF',
 		},400);
+
 		computation(this, thisVal);
 	});
 
