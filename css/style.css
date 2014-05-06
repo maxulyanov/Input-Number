@@ -1,0 +1,43 @@
+/*Reset*/
+*{
+	margin:0;
+	padding:0;
+}
+ul{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+input,select,option, img{
+	outline:0;
+	border:0;
+}
+a{
+    text-decoration: none;
+}
+
+/*General*/
+body{
+	background: #f7f7f7;
+}
+#global-wrapper{
+	width: 960px;
+	margin: 20px auto;
+}
+.wrap{
+
+}
+.wrap > input[type="button"]{
+	background: rgb(162, 162, 162);
+	padding: 4px 7px;
+	width: 30px;
+	font-weight: bold;
+	color: #FFF;
+	cursor: pointer;
+}
+.number-field{
+	border: 1px solid rgb(185, 185, 185);
+	padding: 4px 0;
+}
+
