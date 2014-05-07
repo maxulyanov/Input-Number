@@ -32,15 +32,18 @@ $(function(){
 	});
 
 	// Ввод с клавиатуры
-	$('.number-field').keypress(function(event){
+	$('.number-field').on('keypress input change', function(event){
 		if(event.charCode < 48 || event.charCode > 57) return false;
 		var thisVal = $(this).parent().find('.number-field').val(); 
-		if(thisVal < 1) thisVal = 1;
+
 		computation(this, thisVal);
 	})
  
 	// Результат
 	function computation(elem, val){
+		if(isNaN(val)){
+			val = 1;
+		}
 		$(elem).parent().find('.number-field').val(val);
 		$(elem).parent().find('.number-field').attr('value', val);
 	}
