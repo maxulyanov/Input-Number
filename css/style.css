@@ -25,10 +25,10 @@ body{
 	width: 150px;
 	margin: 20px auto;
 }
-.wrap{
+.number-wrap{
 	margin-bottom: 10px;
 }
-.wrap > input[type="button"]{
+.number-wrap > button[type="button"]{
 	padding: 4px 7px;
 	width: 30px;
 	position: relative;
@@ -42,12 +42,12 @@ body{
     -webkit-border-radius: 3px;
     border-radius: 3px;
 }
-.wrap > input[type="button"]:hover{
+.number-wrap > button[type="button"]:hover{
 	background: #637481;
 	box-shadow: 0 2px 0 #55636F;
 	border-top: 1px solid #637481;
 }
-.wrap > input[type="button"]:active{
+.number-wrap > button[type="button"]:active{
 	top:1px;
 	box-shadow: 0 1px 0 #55636F;
 }
@@ -65,7 +65,7 @@ body{
 	box-shadow: 0px 0 2px #71B2E7;
 	border: 1px solid #71B2E7;
 }
-.wrap > input[type="button"],
+.number-wrap > button[type="button"],
 .number-field{
 	font-family: 'Open Sans', sans-serif
 }
